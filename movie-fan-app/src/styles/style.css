@@ -2,6 +2,8 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+@import 'https://fonts.googleapis.com/css?family=Montserrat';
+@import 'https://fonts.googleapis.com/css?family=Lato';
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -61,12 +63,22 @@ input:focus {
   outline: none;
 }
 
+.nav-item a {
+  position: relative;
+  text-decoration: none;
+  color: white;
+}
+.nav-item a:hover {
+  color: white;
+  text-decoration: none;
+}
+
 .nav-bar-container {
-  background: linear-gradient(to bottom, #000000 0%, #171819 100%, #171819 100%, #171819 102%);
+  background: #5d5d5d;
+  background: linear-gradient(180deg, #373737 0%, black 90%);
 }
 .nav-bar-container .nav-item {
   list-style: none;
-  color: white;
 }
 .nav-bar-container .nav-bar-brand {
   width: 50px;
@@ -80,6 +92,94 @@ input:focus {
   background: #252525;
   border: none;
   color: white;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(#444 -50%, #000 150%);
+  font-family: "Montserrat", sans-serif;
+}
+
+hr {
+  border: none;
+  float: left;
+  width: calc(100% + 30px);
+  height: 1px;
+  background-color: #e6e6e6;
+  margin: 15px 0 20px;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+h3 {
+  margin-bottom: 0px;
+}
+
+section h3.varient-3 {
+  margin-bottom: 0;
+  display: none;
+}
+section h3 + div span {
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+  color: white;
+}
+section h3 + div span:before, section h3 + div span:after {
+  content: "";
+  position: absolute;
+  bottom: -7px;
+  width: 0px;
+  height: 3px;
+  margin: 5px 0 0;
+  transition: all 0.2s ease-in-out;
+  transition-duration: 0.75s;
+  opacity: 0;
+}
+section h3 + div span.hover-1:after {
+  left: 0;
+  background-color: #d34eb4;
+}
+section h3 + div span.hover-2:after {
+  right: 0;
+  background-color: #be3081;
+}
+section h3 + div span.hover-3:before {
+  left: calc(50%);
+  background-color: white;
+}
+section h3 + div span.hover-3:after {
+  right: calc(50%);
+  background-color: white;
+}
+section h3 + div span.hover-4:before {
+  left: 0;
+  background-color: #7e5f79;
+}
+section h3 + div span.hover-4:after {
+  right: 0;
+  background-color: #7e5f79;
+}
+section h3 + div:hover {
+  cursor: pointer;
+}
+section h3 + div:hover span:before, section h3 + div:hover span:after {
+  width: 100%;
+  opacity: 1;
+}
+section h3 + div:hover span.hover-3:before, section h3 + div:hover span.hover-3:after, section h3 + div:hover span.hover-4:before, section h3 + div:hover span.hover-4:after {
+  width: 50%;
 }
 
 /*# sourceMappingURL=style.css.map */
