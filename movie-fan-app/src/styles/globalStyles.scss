@@ -5,3 +5,16 @@
 input:focus {
     outline: none;
 }
+
+.nav-item {
+    a {
+        position: relative;
+        text-decoration: none;
+        color: white;
+        &:hover {
+            color: white;
+            text-decoration: none;
+        }
+    } 
+}
+
