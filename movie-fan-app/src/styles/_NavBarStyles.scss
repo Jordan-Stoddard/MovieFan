@@ -1,23 +1,30 @@
-.nav-bar-container {
-    background: linear-gradient(to bottom, #000000 0%,#171819 100%,#171819 100%,#171819 102%);
-    .nav-item {
-        list-style: none;
-        color: white;
-    }
-    .nav-bar-brand {
-        width: 50px;
-        border-radius: 50%;
-    }
-    
-    .nav-bar-search {
-        width: 330px;
-        border-radius: 18px;
-        padding: 5%;
-        height: 10px;
-        background: rgb(37, 37, 37);
-        border: none;
-        color: white;
-    }
 
+  
+  .nav-bar-container {
+    background: rgb(93,93,93);
+    background: linear-gradient(180deg, rgb(55, 55, 55) 0%, rgba(0,0,0,1) 90%);
+
+  .nav-item {
+    list-style: none;
+  }
+  .nav-bar-brand {
+    width: 50px;
+    border-radius: 50%;
+  }
+
+  .nav-bar-search {
+    width: 330px;
+    border-radius: 18px;
+    padding: 5%;
+    height: 10px;
+    background: rgb(37, 37, 37);
+    border: none;
+    color: white;
+  }
+
+
+  
 
 } // End of nav-bar-container
+
+
