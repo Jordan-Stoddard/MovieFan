@@ -1,0 +1,148 @@
+@import 'https://fonts.googleapis.com/css?family=Montserrat';
+@import 'https://fonts.googleapis.com/css?family=Lato';
+$gutter: 15px;
+$animate: all 0.2s ease-in-out;
+$rounded: 4px;
+$col1: desaturate(#FF22CC, 40%);
+$col2: desaturate(#EE0088, 40%);
+$col3: desaturate(#DD33AA, 40%);
+$col4: desaturate(#AA3399, 40%);
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(#444 -50%, #000 150%);
+  font-family: "Montserrat", sans-serif;
+}
+
+hr {
+  border: none;
+  float: left;
+  width: calc(100% + #{$gutter*2});
+  height: 1px;
+  background-color: darken(white, 10%);
+  margin: 15px 0 20px;
+  margin-left: -$gutter;
+  margin-right: -$gutter;
+}
+
+h3 {
+    margin-bottom: 0px;
+}
+
+section {
+
+  h3 {
+   
+    &:after {
+    }
+    &.varient-1 {
+   
+      &:after {
+    
+      }
+    }
+    &.varient-2 {
+     
+      &:after {
+       
+      }
+    }
+    &.varient-3 {
+        margin-bottom: 0;
+        display: none;
+      &:after {
+     
+      }
+    }
+    &.varient-4 {
+ 
+      &:after {
+      
+      }
+    }
+    & + div {
+     
+      span {
+        font-size: 16px;
+        margin: 0;
+        padding: 0;
+        transition: $animate;
+        position: relative;
+        color: white;
+        &:before,
+        &:after {
+          content: "";
+          position: absolute;
+          bottom: -7px;
+          width: 0px;
+          height: 3px;
+          margin: 5px 0 0;
+          transition: $animate;
+          transition-duration: 0.75s;
+          opacity: 0;
+        }
+        &.hover-1 {
+          &:after {
+            left: 0;
+            background-color: $col1;
+          }
+        }
+        &.hover-2 {
+          &:after {
+            right: 0;
+            background-color: $col2;
+          }
+        }
+        &.hover-3 {
+          &:before {
+            left: calc(50%);
+            //width: 50%;
+            background-color: white;;
+          }
+          &:after {
+            right: calc(50%);
+            //width: 50%;
+            background-color: white;
+          }
+        }
+        &.hover-4 {
+          &:before {
+            left: 0;
+            //width: 50%;
+            background-color: $col4;
+          }
+          &:after {
+            right: 0;
+            //width: 50%;
+            background-color: $col4;
+          }
+        }
+      }
+      &:hover {
+        cursor: pointer;
+        span {
+          &:before,
+          &:after {
+            width: 100%;
+            opacity: 1;
+          }
+          &.hover-3,
+          &.hover-4 {
+            &:before,
+            &:after {
+              width: 50%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
