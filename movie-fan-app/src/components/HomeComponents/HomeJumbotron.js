@@ -5,17 +5,14 @@ const HomeJumbotron = props => {
   return (
     <div>
       <Jumbotron className="home-jumbotron">
-        <Container>
-          <div className="jumbo-container">
-
-            <div >
+            <div className="jumbo-text-container">
               <h1 className="display-3">MovieFan</h1>
               <br />
               <p className="lead jumbotron-catchphrase">
                 Explore. Discover. Remember.
               </p>
               <br />
-              <p className="lead">
+              <p className="lead lead2">
                 MovieFan allows you to browse movies from top rated to upcoming,
                 from old favorites to the newest releases.
               </p>
@@ -24,13 +21,13 @@ const HomeJumbotron = props => {
             <img
             className="jumbo-img"
               src={
-                "https://image.tmdb.org/t/p/w500/a1MlbLBk5Sy6YvMbSuKfwGlDVlb.jpg"
+                "https://image.tmdb.org/t/p/original/a1MlbLBk5Sy6YvMbSuKfwGlDVlb.jpg"
               }
               alt="cars movie poster"
             />
             
-          </div>
-        </Container>
+         
+        
       </Jumbotron>
     </div>
   );
