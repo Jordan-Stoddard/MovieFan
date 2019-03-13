@@ -1,5 +1,5 @@
 import React from 'react'
-import { Route } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 import NavBar from './components/Navigation/NavBar'
 import Discover from './views/Discover'
 import NowPlaying from './views/NowPlaying'
@@ -14,6 +14,7 @@ export default function App() {
   return (
     <div>
       <NavBar/>
+    <Switch>
     <Route path="/" exact component={Home}/>
     <Route path="/discover" component={Discover}/>
     <Route path="/popular" component={Popular}/>
@@ -23,6 +24,7 @@ export default function App() {
     <Route path="/tv-shows" component={TVShows}/>
     <Route path="/details/movie/:id" component={Home}/>
     <Route path="/details/tv/:id" component={Home}/>
+    </Switch>
     </div>
   )
 }
