@@ -1,5 +1,7 @@
 import React from "react";
-import { Jumbotron, Container } from "reactstrap";
+import { Jumbotron } from "reactstrap";
+
+// Styles found in _homePageStyles
 
 const HomeJumbotron = props => {
   return (
