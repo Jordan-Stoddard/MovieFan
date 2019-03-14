@@ -8,8 +8,8 @@ export default function PopularCarousel() {
   
   return (
     <div className="small-carousel">
-      <h2>Swipe To Slide</h2>
-      <Slider slidesToShow={5} infinite className="center">
+      <h2 className="small-carousel-genre">POPULAR</h2>
+      <Slider slidesToShow={6} infinite className="center">
       {popularMovies.map(movie => 
         <MovieSlide movie={movie} key={movie.id}/>)}
       </Slider>
