@@ -219,6 +219,17 @@ section h3 + div:hover span.hover-3:before, section h3 + div:hover span.hover-3:
   text-shadow: 1px;
 }
 
+.small-carousel {
+  width: 80%;
+  margin: 0 auto 250px auto;
+  height: 200px;
+}
+.small-carousel .slider-img {
+  width: 95% !important;
+  margin: 0 10px 0 10px;
+  height: 190px;
+}
+
 .home-jumbotron {
   margin-top: 40px;
   width: 80%;
