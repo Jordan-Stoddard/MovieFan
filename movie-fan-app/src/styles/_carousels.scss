@@ -1,44 +1,83 @@
 .carousel-img {
-    width: 100%;
-    height: 93.4vh;
-    margin-bottom: 40px;
+  width: 100%;
+  height: 93.4vh;
+  margin-bottom: 40px;
 }
 
 .carousel-text {
-    position: absolute;
-    right: 0;
-    bottom: 70px;
-    left: 5%;
-    z-index: 10;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    color: white;
-    text-shadow: 2px 2px 4px black;
+  position: absolute;
+  right: 0;
+  bottom: 70px;
+  left: 5%;
+  z-index: 10;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: white;
+  text-shadow: 2px 2px 4px black;
 }
 
 .carousel-genre {
-    font-weight: 500;
-    font-size: 1.0rem;
-    margin-bottom: 0.7rem;
-    letter-spacing: 0.1rem;
+  font-weight: 500;
+  font-size: 1rem;
+  margin-bottom: 0.7rem;
+  letter-spacing: 0.1rem;
 }
 
 .carousel-title {
-font-size: 2.0rem;
-font-weight: 600;
-margin-bottom: 20px;
-text-shadow: 1px;
-
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-shadow: 1px;
 }
 
 .small-carousel {
-    width: 80%;
-    margin: 0 auto 250px auto;
-    height: 200px;
+  width: 80%;
+  margin: 0 auto 230px auto;
+  height: 200px;
 
-    .slider-img {
-        width: 95% !important;
-        margin: 0 10px 0 10px;
-        height: 190px;
+  .small-carousel-genre {
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-bottom: 2.7rem;
+    margin-left: 1.4%;
+    letter-spacing: 0.4rem;
+    color: white;
+    text-shadow: 2px 2px 4px black;
+  }
+
+  .slider-img {
+    width: 100% !important;
+    margin: 0 10px 0 30px;
+    height: 242px;
+
+    .svg-container {
+      position: absolute;
+      top: 20px;
+      background: black;
+      opacity: 0.8;
+      height: 20px;
+      width: .6%;
+      display: -webkit-flex;
+      display: flex;
+      align-items: center;
+
+        .SVG {
+          position: absolute;
+          top: 2px;
+          left: 3px;
+        }
+
+        .svg-text {
+          color: white;
+          font-size: 0.8rem;
+          margin-left: 45%;
+        }
+    } // end of svg-container
+
+
+    .poster-img-carousel {
+      border-radius: 6px;
+      box-shadow: 0px 1px 17px black;
     }
+  }
 } // End of small-carousel
