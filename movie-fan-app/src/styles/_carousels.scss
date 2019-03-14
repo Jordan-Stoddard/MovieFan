@@ -30,3 +30,15 @@ margin-bottom: 20px;
 text-shadow: 1px;
 
 }
+
+.small-carousel {
+    width: 80%;
+    margin: 0 auto 250px auto;
+    height: 200px;
+
+    .slider-img {
+        width: 95% !important;
+        margin: 0 10px 0 10px;
+        height: 190px;
+    }
+} // End of small-carousel
