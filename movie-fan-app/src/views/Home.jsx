@@ -1,10 +1,7 @@
 import React, {useState, useEffect} from "react";
 import HomeCarousel from '../components/Carousels/HomeCarousel'
 import HomeJumboTron from '../components/HomeComponents/HomeJumbotron'
-import PopularCarousel from '../components/Carousels/PopularCarousel'
-import TopRatedCarousel from '../components/Carousels/TopRatedCarousel'
-import UpcomingCarousel from '../components/Carousels/UpcomingCarousel'
-import NowPlayingCarousel from '../components/Carousels/NowPlayingCarousel'
+import SmallMovieCarousel from '../components/Carousels/SmallMovieCarousel'
 import axios from 'axios'
 
 
@@ -19,12 +16,12 @@ export default function Home() {
 
   return (
     <div>
-    {trending.length !== 0 ? <HomeCarousel trending={trending}/> : <div>loading...</div>}
+    <HomeCarousel trending={trending}/>
     <HomeJumboTron fluid/>
-    <PopularCarousel/>
-    <TopRatedCarousel/>
-    <UpcomingCarousel/>
-    <NowPlayingCarousel/>
+    <SmallMovieCarousel topic="popular"/>
+    <SmallMovieCarousel topic="top_rated"/>
+    <SmallMovieCarousel topic="upcoming"/>
+    <SmallMovieCarousel topic="now_playing"/>
     
     </div>
   );
