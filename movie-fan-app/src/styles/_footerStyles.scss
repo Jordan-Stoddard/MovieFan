@@ -1,0 +1,77 @@
+.footer-container {
+  background: rgba(0, 0, 0, 0.445);
+  display: flex;
+  padding: 7rem;
+
+  .portfolio-side {
+    
+    width: 65%;
+
+    .footer-title-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 75px;
+
+      .footer-title {
+        margin-right: 20px;
+        color: white;
+        font-size: 1.6rem;
+        font-weight: 800;
+        letter-spacing: 0.4rem;
+        text-shadow: 2px 2px 4px black;
+      }
+    } // end footer-title-container
+
+    .footer-section-top {
+        display: flex;
+        width: 74%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footer-p {
+        width: 50%;
+        margin: 10px 0;
+        color: white;
+        text-shadow: 2px 2px 4px black;
+        font-size: 0.8rem;
+    }
+    .footer-a {
+        width: 50%;
+        font-size: 0.9rem;
+        margin: 10px 0;
+        text-shadow: 2px 2px 4px black;
+        color: white;
+    }
+    
+    .footer-section-copyright {
+        margin-top: 70px;
+    }
+
+    
+
+
+  } // end of portfolio-side
+
+  .contribution-side {
+    width: 35%;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .movie-db-img {
+        width: 50%;
+        height: 35%;
+    }
+
+    .social-media-links {
+        width: 50%;
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        background-position: ce
+    }
+  }
+} // end of footer-container
