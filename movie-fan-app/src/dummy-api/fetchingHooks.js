@@ -17,19 +17,3 @@ export const useGetTopic = (topic, page) => {
   }, []);
   return getMovies;
 };
-
-export const useGetGenres = () => {
-  const [genre, setGenre] = useState([])
-
-  useEffect(() => {
-    (() => {
-      axios
-        .get(
-          `https://api.themoviedb.org/3/genre/movie/list?api_key=ce7c59deb6a7bf9b40fc57ad9e1ff469&language=en-US`
-        )
-        .then(res => setGenre(res.data))
-        .catch(err => console.log(err));
-    })();
-  }, []);
-  return genre;
-}
