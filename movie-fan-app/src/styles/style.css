@@ -439,7 +439,7 @@ section h3 + div:hover span.hover-3:before, section h3 + div:hover span.hover-3:
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
   grid-column-gap: 1%;
-  grid-row-gap: 8%;
+  grid-row-gap: 6%;
 }
 .movie-poster-container .movie-poster {
   display: flex;
@@ -449,12 +449,82 @@ section h3 + div:hover span.hover-3:before, section h3 + div:hover span.hover-3:
 .movie-poster-container .movie-poster .poster-img-carousel {
   border-radius: 6px;
   box-shadow: 0px 1px 17px black;
+  height: 231px;
+  display: flex;
+  align-items: center;
+  text-align: center;
 }
 .movie-poster-container .movie-poster .movie-poster-title {
   color: white;
   text-shadow: 1px 1px 4px black;
   margin: 5px 0 5px 0;
   word-spacing: 0px;
+}
+.movie-poster-container .movie-poster .movie-poster-genre {
+  color: #aab2bb;
+  text-shadow: 1px 1px 4px black;
+  font-size: 0.8rem;
+  margin: 5px 0;
+}
+
+.movie-detail-jumbo-img {
+  width: 100%;
+  height: 93.4vh;
+  margin-bottom: 110px;
+  background: linear-gradient(0deg, #5d5d5d 0%, rgba(0, 0, 0, 0) 100%);
+  background-position: center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  box-shadow: 0px 0px 50px black;
+}
+
+.back-arrow {
+  position: relative;
+  top: 60px;
+  left: 100px;
+  font-size: 2rem;
+  color: white;
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+.movie-detail-jumbo-content {
+  position: absolute;
+  bottom: 0px;
+  z-index: 10;
+  left: 10%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: white;
+  text-shadow: 2px 2px 4px black;
+  width: 80%;
+  display: -webkit-flex;
+  display: flex;
+}
+.movie-detail-jumbo-content .movie-detail-jumbo-poster {
+  border-radius: 6px;
+  box-shadow: 0px 0px 4px black;
+  margin-right: 4%;
+}
+.movie-detail-jumbo-content .movie-detail-jumbo-text {
+  display: flex;
+  flex-direction: column;
+}
+.movie-detail-jumbo-content .movie-detail-jumbo-text .movie-detail-jumbo-title {
+  font-size: 2rem;
+  font-weight: 600;
+  text-shadow: 1px;
+}
+.movie-detail-jumbo-content .movie-detail-jumbo-text .movie-detail-jumbo-rating {
+  margin-bottom: 8px;
+  margin-top: 6px;
+}
+.movie-detail-jumbo-content .movie-detail-jumbo-text .movie-detail-jumbo-link {
+  text-decoration: none;
+  color: white;
+}
+.movie-detail-jumbo-content .movie-detail-jumbo-text .movie-detail-jumbo-tagline {
+  margin-top: 8px;
 }
 
 /*# sourceMappingURL=style.css.map */
