@@ -39,7 +39,7 @@
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
   grid-column-gap: 1%;
-  grid-row-gap: 8%;
+  grid-row-gap: 6%;
 
   .movie-poster {
     display: flex;
@@ -49,6 +49,10 @@
     .poster-img-carousel {
       border-radius: 6px;
       box-shadow: 0px 1px 17px black;
+      height: 231px;
+      display: flex;
+      align-items: center;
+      text-align: center;
     }
 
     .movie-poster-title {
@@ -56,6 +60,13 @@
         text-shadow: 1px 1px 4px black;
         margin: 5px 0 5px 0;
         word-spacing: 0px;
+    }
+
+    .movie-poster-genre {
+      color: #aab2bb;
+      text-shadow: 1px 1px 4px black;
+      font-size: 0.8rem;
+      margin: 5px 0;
     }
 
   } // end of movie poster
