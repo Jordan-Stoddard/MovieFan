@@ -22,8 +22,8 @@ export default function MovieDetailJumboTron({ movie, history }) {
             <div className="movie-detail-jumbo-text">
               <h1 className="movie-detail-jumbo-title">{movie.title}</h1>
               <p className="movie-detail-jumbo-rating">{`Rating | ${movie.vote_average} out of 10`}</p>
-              <p className="movie-detail-jumbo-link">{homepage(movie)}</p>
-              <p className="movie-detail-jumbo-tagline">Tagline: {movie.tagline}</p>
+              <p className="movie-detail-jumbo-link"><i className="fas fa-external-link-alt"></i>{homepage(movie)}</p>
+              <p className="movie-detail-jumbo-tagline">{movie.tagline}</p>
             </div>
 
           </div>
