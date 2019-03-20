@@ -13,3 +13,19 @@ export const style = (movie) => {
         return <a href={movie.homepage} target="_blank" rel="noreferrer noopener">{movie.homepage}</a>
     }
 }
+
+export const reviewContent = (str) => {
+  let newStr = ''
+  let currentLength = 0
+
+  for (let i = 0; i < str.length; i++) {
+    let currentLetter = str[i]
+    if(currentLength < 520) {
+      newStr += currentLetter
+      currentLength += 1
+    } else if (currentLength > 520) {
+      break;
+    }
+  }
+  return `${newStr}...`
+}
