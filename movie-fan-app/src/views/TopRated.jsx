@@ -12,7 +12,7 @@ export default function TopRated({topic}) {
     <div>
       <TopBanner title='TOP RATED' image={image}/>
       <div className="separator"></div>
-      <ButtonContainer />
+      <ButtonContainer page={page} setPage={setPage}/>
       <TopicDisplay getMovie={getMovie}/>
     </div>
   )
