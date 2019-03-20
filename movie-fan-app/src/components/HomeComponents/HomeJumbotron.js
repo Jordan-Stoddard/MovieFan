@@ -20,13 +20,9 @@ const HomeJumbotron = props => {
               </p>
             </div>
 
-            <img
-            className="jumbo-img"
-              src={
-                "https://image.tmdb.org/t/p/original/a1MlbLBk5Sy6YvMbSuKfwGlDVlb.jpg"
-              }
-              alt="cars movie poster"
-            />
+            <div className="jumbo-img" style={{backgroundImage: "url(https://image.tmdb.org/t/p/original/a1MlbLBk5Sy6YvMbSuKfwGlDVlb.jpg)"}}>
+
+            </div>
             
          
         
