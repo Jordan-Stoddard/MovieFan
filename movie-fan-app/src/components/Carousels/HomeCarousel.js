@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Carousel, CarouselItem} from "reactstrap";
+import {Link} from 'react-router-dom'
 
 class HomeCarousel extends Component {
   state = { activeIndex: 0 };
@@ -45,7 +46,9 @@ class HomeCarousel extends Component {
           onExited={this.onExited}
           key={item.id}
         >
-          <img className="carousel-img" src={`https://image.tmdb.org/t/p/original${item.backdrop_path}`} alt={item.altText} />
+        <Link to={`/details/movie/${item.id}`}>
+          <div className="carousel-img" style={{backgroundImage: `url(https://image.tmdb.org/t/p/original${item.backdrop_path})`}}></div>
+          </Link>
           <div className="carousel-text">
           <h3 className="carousel-genre">TRENDING</h3>
           <h2 className="carousel-title">{item.original_title}</h2>
