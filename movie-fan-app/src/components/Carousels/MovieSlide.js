@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from 'react-router-dom'
 
 export default function MovieSlide({ movie } = this.props) {
   return (
@@ -6,12 +7,14 @@ export default function MovieSlide({ movie } = this.props) {
     <div className="svg-container">
       <SVG/>
       <p className="svg-text">{movie.vote_average}</p>
-    </div>  
+    </div>
+    <Link to={`/details/movie/${movie.id}`}>
       <img
         src={`https://image.tmdb.org/t/p/w154${movie.poster_path}`}
         alt={movie.title}
         className="poster-img-carousel"
       />
+      </Link>
     </div>
   );
 }
