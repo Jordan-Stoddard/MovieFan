@@ -2,6 +2,7 @@ import React from "react";
 import { Jumbotron } from "reactstrap";
 
 // Styles found in _homePageStyles
+// Direct parent component: Home
 
 const HomeJumbotron = props => {
   return (
