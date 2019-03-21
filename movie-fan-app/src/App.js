@@ -9,6 +9,7 @@ import Upcoming from './views/Upcoming'
 import NowPlaying from './views/NowPlaying'
 import TVShows from './views/TVShows'
 import MovieDetailPage from './views/MovieDetailPage'
+import PeopleDetailPage from './views/PeopleDetailPage'
 
 
 export default function App() {
@@ -24,6 +25,7 @@ export default function App() {
     <Route onUpdate={window.scrollTo(0, 0)} path="/tv-shows" component={TVShows}/>
     <Route onUpdate={window.scrollTo(0, 0)} path="/details/movie/:id" component={MovieDetailPage}/>
     <Route onUpdate={window.scrollTo(0, 0)} path="/details/tv/:id" component={Home}/>
+    <Route onUpdate={window.scrollTo(0, 0)} path="/details/people/:id" component={PeopleDetailPage}/>
     </Switch>
     <Footer />
     </div>
