@@ -93,9 +93,16 @@
   }
 
   .summary-text {
-    width: 90%;
     word-spacing: 0;
     line-height: 2rem;
+    display: flex;
+    justify-content: center;
+  }
+  .summary-text-none {
+    word-spacing: 0;
+    line-height: 2rem;
+    display: flex;
+    justify-content: center;
   }
 } // end of summary container
 
@@ -123,8 +130,6 @@
   margin-bottom: 90px;
 
   .review-box {
-    // background: linear-gradient(30deg, rgba(255, 255, 255, 0.003) 2%, #202020 88%);
-    height: 290px;
     padding: 3rem;
     border-radius: 4px;
     box-shadow: 2px 2px 12px black;
