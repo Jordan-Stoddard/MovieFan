@@ -577,9 +577,16 @@ section h3 + div:hover span.hover-3:before, section h3 + div:hover span.hover-3:
   margin-bottom: 30px;
 }
 .summary-container .summary-text {
-  width: 90%;
   word-spacing: 0;
   line-height: 2rem;
+  display: flex;
+  justify-content: center;
+}
+.summary-container .summary-text-none {
+  word-spacing: 0;
+  line-height: 2rem;
+  display: flex;
+  justify-content: center;
 }
 
 .trailer-container {
@@ -604,7 +611,6 @@ section h3 + div:hover span.hover-3:before, section h3 + div:hover span.hover-3:
   margin-bottom: 90px;
 }
 .review-box-container .review-box {
-  height: 290px;
   padding: 3rem;
   border-radius: 4px;
   box-shadow: 2px 2px 12px black;
