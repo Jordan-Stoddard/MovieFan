@@ -51,7 +51,8 @@ class HomeCarousel extends Component {
           </Link>
           <div className="carousel-text">
           <h3 className="carousel-genre">TRENDING</h3>
-          <h2 className="carousel-title">{item.original_title}</h2>
+          <h2 className="carousel-title">{item.title}</h2>
+          <h2 className="carousel-title">{item.name}</h2>
           <p>{`Rating | ${item.vote_average} out of 10`}</p>
           </div>
           </CarouselItem>
