@@ -1,0 +1,46 @@
+.static-cast-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 90px;
+}
+
+.static-cast-title {
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-bottom: 2.7rem;
+    margin-left: 1.4%;
+    letter-spacing: 0.4rem;
+    color: white;
+    text-shadow: 2px 2px 4px black;
+}
+
+.cast-img-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .static-cast-img {
+        border-radius: 6px;
+        box-shadow: 4px 4px 4px black;
+    }
+
+    .static-cast-text {
+        color: darkgrey;
+          margin-top: 15px;
+          width: 60%;
+          font-size: 0.8rem;
+          word-spacing: 0;
+          text-align: center;
+    }
+
+} // end cast=img-container
+
+
+.static-cast-link {
+    a {
+        text-decoration: none;
+        &:hover {
+            text-decoration: none;
+        }
+      }
+}
