@@ -17,13 +17,13 @@ export default function Home() {
 
   return (
     <div>
-      <HomeCarousel trending={trending} />
+      <HomeCarousel trending={trending} topic="movie"/>
       <HomeJumboTron fluid />
       <div className="home-carousel-container">
-        <SmallMovieCarousel topic="popular" page="1" genre="POPULAR" />
-        <SmallMovieCarousel topic="top_rated" page="1" genre="TOP RATED" />
-        <SmallMovieCarousel topic="upcoming" page="1" genre="UPCOMING" />
-        <SmallMovieCarousel topic="now_playing" page="1" genre="NOW PLAYING" />
+        <SmallMovieCarousel topic="popular" page="1" genre="POPULAR" media="movie"/>
+        <SmallMovieCarousel topic="top_rated" page="1" genre="TOP RATED" media="movie"/>
+        <SmallMovieCarousel topic="upcoming" page="1" genre="UPCOMING" media="movie"/>
+        <SmallMovieCarousel topic="now_playing" page="1" genre="NOW PLAYING" media="movie"/>
       </div>
     </div>
   );
