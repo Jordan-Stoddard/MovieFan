@@ -33,9 +33,17 @@ export const reviewContent = (str) => {
   return `${newStr}...`
 }
 
-export const summaryView = (str) => {
+export const biographyView = (str) => {
   if (!str) {
     return <p className="summary-text-none">There is no biography for this person in our database.</p>
+  } else {
+    return <p className="summary-text">{str}</p>
+  }
+}
+
+export const summaryView = (str) => {
+  if (!str) {
+    return <p className="summary-text-none">There is no summary for this movie in our database.</p>
   } else {
     return <p className="summary-text">{str}</p>
   }
