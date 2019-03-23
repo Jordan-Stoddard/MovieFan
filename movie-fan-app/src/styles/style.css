@@ -341,6 +341,20 @@ section h3 + div:hover span.hover-3:before, section h3 + div:hover span.hover-3:
   margin-right: 25%;
 }
 
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 45%;
+}
+
+.search-svg {
+  position: relative;
+  right: 38px;
+  color: darkgrey;
+  background: transparent;
+  border: none;
+}
+
 .footer-container {
   background: rgba(0, 0, 0, 0.445);
   display: flex;
@@ -433,6 +447,16 @@ section h3 + div:hover span.hover-3:before, section h3 + div:hover span.hover-3:
   width: 30%;
 }
 
+@media (min-width: 0px) and (max-width: 500px) {
+  .separator {
+    border: 1px solid green;
+  }
+}
+@media (min-width: 501px) and (max-width: 900px) {
+  .separator {
+    border: 1px solid orange;
+  }
+}
 .button-container {
   display: flex;
   justify-content: center;
@@ -479,6 +503,7 @@ section h3 + div:hover span.hover-3:before, section h3 + div:hover span.hover-3:
   display: flex;
   align-items: center;
   text-align: center;
+  color: lightgrey;
 }
 .movie-poster-container .movie-poster .movie-poster-title {
   color: white;
