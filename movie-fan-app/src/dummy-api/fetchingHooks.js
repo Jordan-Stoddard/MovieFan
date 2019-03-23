@@ -60,8 +60,12 @@ export const useGetTrailer = (id) => {
         `https://api.themoviedb.org/3/movie/${id}/videos?api_key=ce7c59deb6a7bf9b40fc57ad9e1ff469&language=en-US`
       )
       .then(res => {
-        const filteredTrailers = res.data.results.filter(trailer => trailer.type === "Trailer")
-        setGetTrailer(filteredTrailers[0])
+        if (res.data.results.length === 0) {
+          setGetTrailer(res.data.results)
+        } else {
+          const filteredTrailers = res.data.results.filter(trailer => trailer.type === "Trailer")
+          setGetTrailer(filteredTrailers[0])
+        }
       })
       .catch(err => console.log(err))
     })()
@@ -118,4 +122,21 @@ export const useGetPersonRoles = (id) => {
     })()
   }, [])
   return getPersonRoles
+}
+
+export const useGetSearch = (str) => {
+  const [searchResults, setSearchResults] = useState([])
+
+  useEffect(() => {
+    (() => {
+      axios.get(
+        `http://api.themoviedb.org/3/search/movie?api_key=ce7c59deb6a7bf9b40fc57ad9e1ff469&language=en-US&query=${str}`
+      )
+      .then(res => {
+        setSearchResults(res.data.results)
+      })
+      .catch(err => console.log(err))
+    })()
+  }, [str])
+  return searchResults
 }
