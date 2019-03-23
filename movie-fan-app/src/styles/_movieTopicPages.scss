@@ -4,6 +4,19 @@
   margin: 90px auto;
   box-shadow: 0px 0px 15px white;
   width: 30%;
+  
+}
+
+@include phone {
+ .separator {
+   border: 1px solid green;
+ }   
+}
+
+@include tablet {
+  .separator {
+    border: 1px solid orange;
+  }
 }
 
 .button-container {
@@ -53,6 +66,7 @@
       display: flex;
       align-items: center;
       text-align: center;
+      color: lightgrey;
     }
 
     .movie-poster-title {
