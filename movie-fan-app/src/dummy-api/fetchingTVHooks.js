@@ -111,3 +111,20 @@ export const useGetTVTrending = () => {
     }, [])
     return getTVReviews
   }
+
+  export const useGetTVSearch = (str) => {
+    const [searchTVResults, setSearchTVResults] = useState([])
+  
+    useEffect(() => {
+      (() => {
+        axios.get(
+          `http://api.themoviedb.org/3/search/tv?api_key=ce7c59deb6a7bf9b40fc57ad9e1ff469&language=en-US&query=${str}`
+        )
+        .then(res => {
+          setSearchTVResults(res.data.results)
+        })
+        .catch(err => console.log(err))
+      })()
+    }, [str])
+    return searchTVResults
+  }
