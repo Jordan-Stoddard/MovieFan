@@ -4,8 +4,26 @@
     }
 };
 
-@mixin tablet {
-    @media (min-width: 501px) and (max-width:900px) {
+@mixin large {
+    @media (min-width: 850px) and (max-width:1110px) {
         @content
     }
 };
+
+@mixin tablet {
+    @media (min-width: 501px) and (max-width:850px) {
+        @content
+    }
+};
+
+@mixin footerSize2 {
+    @media (min-width: 1246px) and (max-width:1360px) {
+        @content
+    }
+};
+
+@mixin footerSize3 {
+    @media (min-width: 1111px) and (max-width:1245px) {
+        @content
+    }
+}
