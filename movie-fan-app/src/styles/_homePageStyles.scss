@@ -1,62 +1,125 @@
 .home-jumbotron {
-    margin-top: 40px;
-    width: 80%;
-    margin: 0 auto;
-    background-color: transparent;
-    color:white;
-    text-shadow: 2px 2px 4px black;
-    padding-left: 0;
-    padding-right: 0;
+  margin-top: 40px;
+  width: 80%;
+  margin: 0 auto;
+  background-color: transparent;
+  color: white;
+  text-shadow: 2px 2px 4px black;
+  padding-left: 0;
+  padding-right: 0;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 100px;
+  @include large {
+    flex-direction: column;
+    margin-bottom: 90px;
+    padding: 0;
+  }
+  @include tablet {
+    flex-direction: column;
+    flex-direction: column;
+    margin-bottom: 90px;
+    padding: 0;
+  }
+  @include phone {
+    flex-direction: column;
+    flex-direction: column;
+    margin-bottom: 90px;
+    padding: 0;
+  }
+
+  .jumbotron-catchphrase {
+    word-spacing: 30px;
+  }
+
+  .jumbo-container {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 100px;
-
-    .jumbotron-catchphrase {
-        word-spacing: 30px;
+    align-content: flex-end;
+    padding: 0;
+    width: 100%;
+  }
+  .jumbo-img {
+    width: 100%;
+    height: 280px;
+    border-radius: 4px;
+    box-shadow: 0px 0px 20px black;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    @include large {
+      height: 490px;
+      margin-top: 60px;
+    }
+    @include tablet {
+      height: 372px;
+      margin-top: 60px;
     }
 
-    .jumbo-container {
-        display: flex;
-        justify-content: space-between;
-        align-content: flex-end;
-        padding: 0;
-        width: 100%;
+    @include phone {
+      height: 265px;
+      margin-top: 40px;
     }
-    .jumbo-img {
-        width: 100%;
-        height: 280px;
-        border-radius: 4px;
-        box-shadow: 0px 0px 20px black;
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        @media (min-width: 1900px){
-            width: 50%;
-        }
-    }
+  }
 
-    .jumbo-text-container {
+  .jumbo-text-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    @include large {
+      text-align: center;
+      align-items: center;
+      height: 240px;
+      justify-content: space-evenly;
     }
 
-    .lead2{
-        margin-right: 25%;
+    @include tablet {
+      text-align: center;
+      align-items: center;
+      height: 300px;
+      justify-content: space-evenly;
     }
+    @include phone {
+      text-align: center;
+      align-items: center;
+      height: 300px;
+      justify-content: space-evenly;
+    }
+  } // end text-container
+
+  .lead2 {
+    margin-right: 25%;
+    @include large {
+      margin: 0;
+      width: 70%;
+    }
+    @include tablet {
+      margin: 0;
+      width: 70%;
+      font-size: 1.1rem;
+    }
+    @include phone {
+      margin: 0;
+      width: 70%;
+      font-size: 1.1rem;
+    }
+  }
 }
 
 .loader {
-    position: absolute;
-    top: 50%;
-    left: 45%;
+  position: absolute;
+  top: 50%;
+  left: 45%;
+  @include large {
+    top: 45%;
+    left: 46%;
+  }
+  @include tablet {
+    top: 30%;
+  }
+  @include phone {
+    left: 39%;
+    top: 71%;
+  }
 }
-
-.search-svg {
-    position: relative;
-    right: 38px;
-    color: darkgrey;
-    background: transparent;
-    border: none;
-}
-
