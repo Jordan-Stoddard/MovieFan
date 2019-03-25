@@ -16,6 +16,15 @@
   background-size: cover !important;
   background-repeat: no-repeat !important;
   box-shadow: 0px 0px 50px black;
+  @include large {
+    height: 600px;
+  }
+  @include tablet {
+    height: 400px;
+  }
+  @include phone {
+    height: 300px;
+  }
 }
 
 .back-arrow {
