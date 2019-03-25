@@ -3,6 +3,22 @@
   display: flex;
   padding: 7rem;
 
+  @include footerSize2 {
+    padding: 4rem;
+  }
+
+  @include footerSize3 {
+    padding: 2rem;
+  }
+
+  @include large {
+    padding: 2rem;
+  }
+
+  @include tablet {
+    padding: 0.5rem;
+  }
+
   .portfolio-side {
     
     width: 65%;
@@ -12,6 +28,35 @@
       justify-content: space-between;
       align-items: flex-end;
       margin-bottom: 75px;
+
+      @include large {
+        display: flex;
+        -webkit-justify-content: space-between;
+        justify-content: space-between;
+        margin-bottom: 25px;
+        flex-direction: column;
+        height: 220px;
+        align-items: flex-start;
+      }
+      @include tablet {
+        display: flex;
+        -webkit-justify-content: space-between;
+        justify-content: space-between;
+        margin-bottom: 25px;
+        flex-direction: column;
+        height: 220px;
+        align-items: flex-start;
+      }
+
+      .hover-3 {
+        @include large {
+          font-size: 1.4rem;
+        }
+        
+          @include tablet {
+            font-size: 1.4rem;
+          }
+      }
 
       .footer-title {
         margin-right: 20px;
@@ -28,6 +73,16 @@
         width: 74%;
         display: flex;
         justify-content: space-between;
+        @include footerSize2 {
+          width: 80%;
+        }
+        @include footerSize3 {
+          width: 80%;
+        }
+        @include large {
+          width: 110%;
+        }
+
     }
 
     .footer-p {
