@@ -69,6 +69,11 @@ section {
       }
     }
     & + div {
+      @include phone {
+        display: flex;
+        justify-content: center;
+        margin: 20px 0;
+      }
      
       span {
         font-size: 16px;
