@@ -1,34 +1,137 @@
 
-  
   .nav-bar-container {
     background: rgb(172, 54, 54);
     background: linear-gradient(-1deg, #a68ae6 -300%, black 66%);
-
+    display: flex;
+    align-items: center;
+    padding: 0.7%;
+    @include large {
+      flex-direction: column;
+    }
     @include tablet {
-      
+      flex-direction: column;
+    }
+    @include phone {
+      flex-direction: column;
     }
 
-  .nav-item {
-    list-style: none;
-  }
-  .nav-bar-brand {
-    width: 50px;
-    border-radius: 50%;
-  }
+    .nav-bar-search-container {
+      @include large {
+        width: 100%;
+      }
+      @include tablet {
+        width: 100%;
+      }
 
-  .nav-bar-search {
-    width: 290px;
-    border-radius: 18px;
-    padding: 5%;
-    height: 40px;
-    background: #252525;
-    border: none;
-    color: white;
-    font-size: 0.9rem;
-  }
+      .search-svg {
+        position: relative;
+        right: 38px;
+        color: darkgrey;
+        background: transparent;
+        border: none;
+        @include large {
+            display: none;
+        }
+        @include tablet {
+          display: none;
+        }
+        @include phone {
+          display: none;
+        }
+    }
+    }
 
+    .nav-bar-container-2 {
+      display: flex;
+      width: 35%;
+      justify-content: space-between;
+      align-items: center;
+      @include large {
+        flex-direction: column;
+        width: 60%;
+        margin: 0 auto;
+      }
+      @include tablet {
+        width: 60%;
+        margin: 0 auto;
+      }
+      @include phone {
+        width: 60%;
+        margin: 0 auto;
+      }
 
-  
+      .nav-bar-brand {
+        width: 50px;
+        border-radius: 50%;
+        @include large {
+          display: none;
+        }
+        @include tablet {
+          display: none;
+          
+        }
+        @include phone {
+          display: none;
+        }
+      }
+    
+      .nav-bar-search {
+        width: 290px;
+        border-radius: 18px;
+        padding: 5%;
+        height: 40px;
+        background: #252525;
+        border: none;
+        color: white;
+        font-size: 0.9rem;
+        @include large {
+          width: 100%;
+          padding: 3%
+        }
+        @include tablet {
+          width: 100%;
+          padding: 3%;
+        }
+      }
+    } // end of container-2
+
+    .nav-bar-container-3 {
+      display: flex;
+      justify-content: space-around;
+      width: 65%;
+        @include large {
+          width: 100%;
+          margin: 1.0rem;
+        }
+        @include tablet {
+          width: 100%;
+        }
+        @include phone {
+          flex-direction: column;
+        }
+
+      .nav-item {
+        list-style: none;
+        @include tablet {
+          padding: 10px 0;
+        }
+      }
+    
+      .hover-3 {
+        font-size: 1.2rem;
+        @include large {
+          font-size: 1.5rem;
+        }
+        @include tablet {
+          font-size: 1.0rem;
+        }
+        @include phone {
+          font-size: 2.6rem;
+        }
+    }
+ 
+  } // end of container-3
+
 
 } // End of nav-bar-container
 
