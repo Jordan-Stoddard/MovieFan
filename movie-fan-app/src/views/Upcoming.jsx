@@ -13,7 +13,7 @@ export default function Upcoming({topic}) {
     <div>
       <TopBanner title="UPCOMING" image={image}/>
       <div className="separator"></div>
-      <ButtonContainer page={page} setPage={setPage}/>
+      <ButtonContainer page={page} setPage={setPage} topic={topic}/>
       <TopicDisplay getMovie={getMovie}/>
     </div>
   )
