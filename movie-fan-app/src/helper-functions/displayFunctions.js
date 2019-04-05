@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 
 export const style = (movie) => {
   if (!movie) {
@@ -46,5 +46,31 @@ export const summaryView = (str) => {
     return <p className="summary-text-none">There is no summary for this movie in our database.</p>
   } else {
     return <p className="summary-text">{str}</p>
+  }
+}
+
+export const setCarouselSlidesOnWidth = (width) => {
+
+  if (width < 1280 && width > 1121) {
+    return 5;
+  }
+  if (width < 1120 && width > 941) {
+    return 4;
+  }
+  if (width < 941 && width > 721) {
+    return 3;
+  }
+  if (width < 721) {
+    return 2;
+  }
+  return 6
+}
+
+export const tvOrMovie = pathname => {
+  if(pathname === '/search-tv') {
+    return 'tv'
+  }
+  else {
+    return 'movie'
   }
 }
