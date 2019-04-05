@@ -1,10 +1,9 @@
 import React from "react";
 import { genreDB } from "../../dummy-api/genre-data";
-import {Link} from 'react-router-dom'
+import {Link, withRouter} from 'react-router-dom'
+import {tvOrMovie} from '../../helper-functions/displayFunctions'
 
-export default function MoviePoster({
-  movie: { poster_path, title, genre_ids, id }
-}) {
+function MoviePoster({movie: { poster_path, title, genre_ids, id, name }, location}) {
   const genres = genreDB.map(genre => {
     if (genre.id === genre_ids[0]) {
       return (
@@ -21,20 +20,24 @@ export default function MoviePoster({
       <div className="poster-img-carousel">
       <p className="movie-poster-unavailable">Image Not Available</p>
       </div>
-      <h1 className="movie-poster-title">{title}</h1>
+      <h1 className="movie-poster-title">{!title ? name : title}</h1>
       {genres}
     </div>
   ) : (
     <div className="movie-poster">
-    <Link to={`/details/movie/${id}`}>
+    <Link to={`/details/${tvOrMovie(location.pathname)}/${id}`}>
       <img
         src={`https://image.tmdb.org/t/p/w154${poster_path}`}
-        alt={title}
+        alt={!title ? name : title}
         className="poster-img-carousel"
       />
       </Link>
-      <h1 className="movie-poster-title">{title}</h1>
+      <h1 className="movie-poster-title">{!title ? name : title}</h1>
       {genres}
     </div>
   );
 }
+
+
+
+export default withRouter(MoviePoster)
