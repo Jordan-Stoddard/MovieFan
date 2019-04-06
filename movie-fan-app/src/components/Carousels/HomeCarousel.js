@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import { Carousel, CarouselItem} from "reactstrap";
-import {Link} from 'react-router-dom'
+import { Carousel, CarouselItem } from "reactstrap";
+import { Link } from "react-router-dom";
+import Loader from "react-loader-spinner";
 
 class HomeCarousel extends Component {
   state = { activeIndex: 0 };
@@ -46,28 +47,44 @@ class HomeCarousel extends Component {
           onExited={this.onExited}
           key={item.id}
         >
-        <Link to={`/details/movie/${item.id}`}>
-          <div className="carousel-img" style={{backgroundImage: `url(https://image.tmdb.org/t/p/original${item.backdrop_path})`}}></div>
+          <Link to={`/details/${this.props.topic}/${item.id}`}>
+            <div
+              className="carousel-img"
+              style={{
+                backgroundImage: `url(https://image.tmdb.org/t/p/original${
+                  item.backdrop_path
+                })`
+              }}
+            />
           </Link>
           <div className="carousel-text">
-          <h3 className="carousel-genre">TRENDING</h3>
-          <h2 className="carousel-title">{item.title}</h2>
-          <h2 className="carousel-title">{item.name}</h2>
-          <p>{`Rating | ${item.vote_average} out of 10`}</p>
+            <h3 className="carousel-genre">TRENDING</h3>
+            <h2 className="carousel-title">{item.title}</h2>
+            <h2 className="carousel-title">{item.name}</h2>
+            <p>{`Rating | ${item.vote_average} out of 10`}</p>
           </div>
-          </CarouselItem>
+        </CarouselItem>
       );
     });
-
-    return (
-      <Carousel
-        activeIndex={activeIndex}
-        next={this.next}
-        previous={this.previous}
-      >
-        {slides}
-      </Carousel>
-    );
+    if (this.props.trending.length === 0) {
+      return (
+        <div className="carousel-img">
+        <div className="loader">
+          <Loader  type="Oval" color="#fff" height="100" width="100" />
+          </div>
+        </div>
+      )
+    } else {
+      return (
+        <Carousel
+          activeIndex={activeIndex}
+          next={this.next}
+          previous={this.previous}
+        >
+          {slides}
+        </Carousel>
+      );
+    }
   }
 }
 
