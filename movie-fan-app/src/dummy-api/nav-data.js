@@ -1,7 +1,4 @@
 export const navDB = [{
-    navTitle: 'input',
-    id: Math.random()
-}, {
     navTitle: 'Popular',
     path: '/popular',
     id: Math.random()
