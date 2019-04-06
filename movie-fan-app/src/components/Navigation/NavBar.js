@@ -1,27 +1,25 @@
 import React from "react";
-import { Navbar } from "reactstrap";
 import { Link } from "react-router-dom";
 import { navDB } from "../../dummy-api/nav-data";
 import NavComponent from "./NavComponent";
 import SearchInput from "./SearchInput";
 import logo from "../../assets/pexels-photo-1282315.jpeg";
 
-export default function NavBar() {
+export default function NavBar({setInputStateFunc}) {
   return (
-    <div className="nav-bar-container">
-      <Navbar>
+    <nav className="nav-bar-container">
+    <div className="nav-bar-container-2">
         <Link to="/">
           <img src={logo} alt="logo" className="nav-bar-brand" />
         </Link>
-
+        <SearchInput setInputStateFunc={setInputStateFunc}/>
+        </div>
+        <div className="nav-bar-container-3">
         {navDB.map(navItem => {
-          if (navItem.navTitle === "input") {
-            return <SearchInput key={navItem.id} />;
-          } else {
-            return <NavComponent key={navItem.id} navItem={navItem} />;
-          }
+          
+            return (<NavComponent key={navItem.id} navItem={navItem} />);
         })}
-      </Navbar>
-    </div>
+        </div>
+    </nav>
   );
 }
