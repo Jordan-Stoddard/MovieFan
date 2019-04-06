@@ -1,14 +1,14 @@
 import React from "react";
 import {Link} from 'react-router-dom'
 
-export default function MovieSlide({ movie } = this.props) {
+export default function MovieSlide({ movie, media } = this.props) {
   return (
     <div className="slider-img">
     <div className="svg-container">
       <SVG/>
       <p className="svg-text">{movie.vote_average}</p>
     </div>
-    <Link to={`/details/movie/${movie.id}`}>
+    <Link to={`/details/${media}/${movie.id}`}>
       <img
         src={`https://image.tmdb.org/t/p/w154${movie.poster_path}`}
         alt={movie.title}
