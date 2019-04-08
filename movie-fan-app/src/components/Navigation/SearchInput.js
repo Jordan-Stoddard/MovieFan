@@ -25,6 +25,7 @@ function SearchInput({setInputStateFunc, history, location}) {
         placeholder={pathName === '/tv-shows' || pathName === '/search-tv' || pathName.includes('/details/tv') ? `Search TV shows...` : `Search movies...`}
         value={searchInput}
         onChange={changeHandler}
+        title={pathName === '/tv-shows' || pathName === '/search-tv' || pathName.includes('/details/tv') ? 'Trying to search movies? Go to any movie portion of the site.' : 'Trying to search TV shows? Go to any TV portion of the site.'}
       />
      <button className="search-svg"><i className="fas fa-search "/></button>
       </form>
