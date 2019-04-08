@@ -8,7 +8,7 @@ const HomeJumbotron = props => {
   return (
     <div>
       <Jumbotron className="home-jumbotron">
-            <div className="jumbo-text-container">
+            <div className="jumbo-text-container" data-aos="fade-right">
               <h1 className="display-3">MovieFan</h1>
               <br />
               <p className="lead jumbotron-catchphrase">
@@ -21,7 +21,7 @@ const HomeJumbotron = props => {
               </p>
             </div>
 
-            <div className="jumbo-img" style={{backgroundImage: "url(https://image.tmdb.org/t/p/original/a1MlbLBk5Sy6YvMbSuKfwGlDVlb.jpg)"}}>
+            <div className="jumbo-img" style={{backgroundImage: "url(https://image.tmdb.org/t/p/original/a1MlbLBk5Sy6YvMbSuKfwGlDVlb.jpg)"}} data-aos="fade-left">
 
             </div>
             

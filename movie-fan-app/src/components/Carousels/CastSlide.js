@@ -1,9 +1,9 @@
 import React from "react";
 import {Link} from 'react-router-dom'
 
-export default function MovieSlide({ cast } = this.props) {
+export default function CastSlide({ cast } = this.props) {
   return (
-    <div className="slider-img">
+    <div className="cast-img">
     
     <Link to={`/details/people/${cast.id}`}>
       <img

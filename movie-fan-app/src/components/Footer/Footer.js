@@ -7,12 +7,14 @@ export default function Footer() {
     <div className="footer-container">
       <div className="portfolio-side">
         <div className="footer-title-container">
-          <h1 className="footer-title">MOVIE FAN</h1>
+          <h1 className="footer-title" data-aos="fade-right">MOVIE FAN</h1>
+          <div className="footer-nav-item-container" data-aos="fade-right">
           {navItems()}
+          </div>
         </div>
 
         <section className="footer-section-top">
-          <p className="footer-p">portfolio:</p>
+          <p className="footer-p">Portfolio:</p>
           <a
             target="_blank"
             className="footer-a"
@@ -24,13 +26,13 @@ export default function Footer() {
         </section>
 
         <section className="footer-section-top">
-          <p className="footer-p">phone number:</p>
-          <p className="footer-p">831-578-8418</p>
+          <p className="footer-p">Phone number:</p>
+          <p className="footer-p">888-888-1337</p>
         </section>
 
         <section className="footer-section-copyright">
-          <p className="footer-p">Copyright ©2019</p>
-          <p className="footer-p">Code and design by Jordan Stoddard</p>
+          <p className="footer-cp">Copyright ©2019</p>
+          <p className="footer-cp">Code and design by Jordan Stoddard</p>
         </section>
       </div>
 

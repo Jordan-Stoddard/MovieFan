@@ -16,18 +16,12 @@ function MoviePoster({movie: { poster_path, title, genre_ids, id, name }, locati
   });
 
   return !poster_path ? (
-    <div className="movie-poster">
-      <div className="poster-img-carousel">
-      <p className="movie-poster-unavailable">Image Not Available</p>
-      </div>
-      <h1 className="movie-poster-title">{!title ? name : title}</h1>
-      {genres}
-    </div>
+    null
   ) : (
     <div className="movie-poster">
     <Link to={`/details/${tvOrMovie(location.pathname)}/${id}`}>
       <img
-        src={`https://image.tmdb.org/t/p/w154${poster_path}`}
+        src={`https://image.tmdb.org/t/p/w342${poster_path}`}
         alt={!title ? name : title}
         className="poster-img-carousel"
       />
