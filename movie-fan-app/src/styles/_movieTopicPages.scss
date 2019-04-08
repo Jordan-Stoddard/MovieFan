@@ -7,18 +7,6 @@
   
 }
 
-@include phone {
- .separator {
-   border: 1px solid green;
- }   
-}
-
-@include tablet {
-  .separator {
-    border: 1px solid orange;
-  }
-}
-
 .button-container {
   display: flex;
   justify-content: center;
@@ -46,18 +34,28 @@
 } // end of button container
 
 .movie-poster-container {
-  width: 80%;
-  margin: 0 auto 25% auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
-  grid-column-gap: 1%;
-  grid-row-gap: 6%;
+  width: 100%;
+  margin: 0 auto 10% auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  @include phone {
+    flex-direction: column;
+    align-items: center;
+
+  }
+
 
   .movie-poster {
     display: flex;
     flex-direction: column;
     width: 154px;
+    margin: 20px 3.5%;
+    @include phone {
+      align-items: center;
+      width: 70%;
+      margin: 20px 0
+    }
 
     .poster-img-carousel {
       border-radius: 6px;
@@ -67,6 +65,10 @@
       align-items: center;
       text-align: center;
       color: lightgrey;
+      @include phone {
+        height: 100%;
+        margin-bottom: 10px;
+      }
     }
 
     .movie-poster-title {
@@ -74,6 +76,11 @@
         text-shadow: 1px 1px 4px black;
         margin: 5px 0 5px 0;
         word-spacing: 0px;
+        overflow-x: hidden;
+        overflow-y: hidden;
+       @include phone {
+        text-align: center;
+       }
     }
 
     .movie-poster-genre {
