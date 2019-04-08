@@ -1,5 +1,5 @@
 import React from "react";
-import image from "../assets/abstract-art-artistic-1020315.jpg";
+import image from "../assets/book-books-bookshelf-159621.jpg";
 import TopBanner from "../components/Banners/TopBanner";
 import { useGetTVSearch } from "../dummy-api/fetchingTVHooks";
 import TopicDisplay from "../components/TopicDisplay/TopicDisplay";

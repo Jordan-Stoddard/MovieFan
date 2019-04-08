@@ -18,7 +18,9 @@ export default function MovieDetailPage(props) {
         <MovieDetailJumboTron movie={movie} {...props}/>
         <div className="movie-detail-content-container">
         <MovieDetailSummary movie={movie} />
+        <div className="home-carousel-container">
         <CastCarousel cast={cast} />
+        </div>
         <MovieDetailTrailer trailer={trailer}/>
         <MovieDetailReviews reviews={reviews}/>
         </div>
