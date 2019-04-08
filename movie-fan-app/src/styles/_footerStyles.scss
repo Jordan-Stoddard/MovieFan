@@ -13,49 +13,59 @@
 
   @include large {
     padding: 2rem;
+    display: flex;
+    flex-direction: column;
   }
 
   @include tablet {
     padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+  }
+  @include phone {
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
   }
 
   .portfolio-side {
-    
-    width: 65%;
+    width: 75%;
+    @include large {
+      width: 100%;
+    }
+    @include tablet {
+      width: 100%;
+    }
+    @include phone {
+      width: 100%;
+    }
 
     .footer-title-container {
       display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
+      align-items: center;
       margin-bottom: 75px;
+      width: 120%;
 
       @include large {
         display: flex;
-        -webkit-justify-content: space-between;
-        justify-content: space-between;
         margin-bottom: 25px;
-        flex-direction: column;
-        height: 220px;
+        height: 30px;
         align-items: flex-start;
+        width: 100%;
       }
       @include tablet {
         display: flex;
-        -webkit-justify-content: space-between;
-        justify-content: space-between;
+        margin-bottom: 25px;
+        align-items: flex-start;
+        flex-direction: column;
+        width: 100%;
+      }
+      @include phone {
+        display: flex;
         margin-bottom: 25px;
         flex-direction: column;
-        height: 220px;
-        align-items: flex-start;
-      }
-
-      .hover-3 {
-        @include large {
-          font-size: 1.4rem;
-        }
-        
-          @include tablet {
-            font-size: 1.4rem;
-          }
+        width: 100%;
+        justify-content: center;
       }
 
       .footer-title {
@@ -65,48 +75,157 @@
         font-weight: 800;
         letter-spacing: 0.4rem;
         text-shadow: 2px 2px 4px black;
+
+        @include footerSize4 {
+          font-size: 1.3rem;
+          margin-right: 10px;
+        }
+        @include tablet {
+          margin: 15px auto;
+        }
+        @include phone {
+          margin: 15px auto;
+        }
+      }
+
+      .footer-nav-item-container {
+        width: 60%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 23px;
+        @include tablet {
+          width: 100%;
+          margin-bottom: 10px;
+          height: 100%;
+        }
+        @include phone {
+          display: none;
+        }
+
+        .hover-3 {
+          font-size: 1.1rem;
+          @include large {
+            font-size: 1.2rem;
+          }
+
+          @include footerSize4 {
+            font-size: 1rem;
+          }
+
+          @include tablet {
+            font-size: 1rem;
+          }
+          @include phone {
+            font-size: 2.6rem;
+          }
+        }
       }
     } // end footer-title-container
 
     .footer-section-top {
-        display: flex;
-        width: 74%;
-        display: flex;
-        justify-content: space-between;
-        @include footerSize2 {
-          width: 80%;
-        }
-        @include footerSize3 {
-          width: 80%;
-        }
-        @include large {
-          width: 110%;
-        }
-
+      display: flex;
+      width: 74%;
+      display: flex;
+      justify-content: space-between;
+      @include footerSize2 {
+        width: 100%;
+        justify-content: flex-start;
+      }
+      @include footerSize3 {
+        width: 100%;
+        justify-content: flex-start;
+      }
+      @include large {
+        width: 100%;
+        justify-content: flex-start;
+      }
+      @include tablet {
+        width: 100%;
+        justify-content: flex-start;
+      }
+      @include phone {
+        width: 100%;
+        flex-direction: column;
+      }
     }
 
     .footer-p {
+      width: 50%;
+      margin: 10px 0;
+      color: white;
+      text-shadow: 2px 2px 4px black;
+      font-size: 0.8rem;
+      @include large {
+        width: 15%;
+        margin-bottom: 15px;
+      }
+      @include footerSize4 {
+        width: 20%;
+      }
+      @include tablet {
+        width: 30%;
+      }
+      @include phone {
+        display: none;
+      }
+    }
+
+    .footer-a {
+      width: 50%;
+      font-size: 0.9rem;
+      margin: 10px 0;
+      text-shadow: 2px 2px 4px black;
+      color: white;
+      @include large {
+        width: 70%;
+        margin-bottom: 15px;
+      }
+      @include tablet {
+        width: 65%;
+      }
+      @include phone {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        font-size: 1.6rem;
+        margin-bottom: 35px;
+      }
+    }
+
+    .footer-section-copyright {
+      margin-top: 70px;
+      @include large {
+        margin-top: 0px;
+      }
+      @include tablet {
+        margin-top: 0px;
+      }
+      @include phone {
+        margin-top: 0px;
+      }
+      .footer-cp {
         width: 50%;
         margin: 10px 0;
         color: white;
         text-shadow: 2px 2px 4px black;
         font-size: 0.8rem;
+        @include large {
+          margin-bottom: 25px;
+        }
+        @include tablet {
+          margin-bottom: 25px;
+          width: 100%;
+        }
+        @include phone {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          font-size: 1.2rem;
+          margin-bottom: 35px;
+        }
+      }
     }
-    .footer-a {
-        width: 50%;
-        font-size: 0.9rem;
-        margin: 10px 0;
-        text-shadow: 2px 2px 4px black;
-        color: white;
-    }
-    
-    .footer-section-copyright {
-        margin-top: 70px;
-    }
-
-    
-
-
   } // end of portfolio-side
 
   .contribution-side {
@@ -116,17 +235,63 @@
     flex-direction: column;
     justify-content: space-between;
 
+    @include large {
+      align-items: center;
+      flex-direction: row;
+      width: 60%;
+      margin: 0 auto;
+      margin-top: 70px;
+    }
+    @include footerSize4 {
+      align-items: center;
+      flex-direction: row;
+      width: 80%;
+      margin: 0 auto;
+      margin-top: 50px;
+    }
+    @include tablet {
+      align-items: center;
+      flex-direction: row;
+      width: 90%;
+      margin: 0 auto;
+      margin-top: 0px;
+      padding: 0.5rem;
+    }
+    @include phone {
+      align-items: center;
+      flex-direction: column-reverse;
+      width: 90%;
+      margin: 0 auto;
+      margin-top: 0px;
+      padding: 0.5rem;
+    }
+
     .movie-db-img {
-        width: 50%;
-        height: 35%;
+      width: 50%;
+      height: 35%;
+      @include large {
+        width: 40%;
+      }
+      @include tablet {
+        width: 40%;
+      }
+      @include phone {
+        width: 95%;
+        margin-top: 25px;
+      }
     }
 
     .social-media-links {
+      width: 50%;
+      height: 50px;
+      display: flex;
+      justify-content: space-between;
+      @include large {
         width: 50%;
-        height: 50px;
-        display: flex;
-        justify-content: space-between;
-        background-position: ce
+      }
+      @include phone {
+        width: 75%;
+      }
     }
   }
 } // end of footer-container
