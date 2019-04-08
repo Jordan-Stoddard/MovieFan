@@ -17,12 +17,10 @@
   }
   @include tablet {
     flex-direction: column;
-    flex-direction: column;
     margin-bottom: 90px;
     padding: 0;
   }
   @include phone {
-    flex-direction: column;
     flex-direction: column;
     margin-bottom: 90px;
     padding: 0;
