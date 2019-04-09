@@ -4,6 +4,8 @@ import TopBanner from "../components/Banners/TopBanner";
 import { useGetTVSearch } from "../dummy-api/fetchingTVHooks";
 import TopicDisplay from "../components/TopicDisplay/TopicDisplay";
 
+// displays search TV page
+
 export default function SearchTVPage({inputState}) {
   const getMovie = useGetTVSearch(inputState);
 
