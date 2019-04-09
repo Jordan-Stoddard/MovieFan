@@ -4,6 +4,8 @@ import PersonDetailJumboTron from '../components/PersonDetailComponents/PersonDe
 import PersonDetailSummary from '../components/PersonDetailComponents/PersonDetailSummary'
 import PersonDetailPopularRoles from '../components/PersonDetailComponents/PersonDetailPopularRoles'
 
+// displays people detail page
+
 export default function PeopleDetailPage(props) {
   const id = props.match.params.id
   const person = useGetPerson(id)
