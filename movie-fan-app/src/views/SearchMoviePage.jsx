@@ -4,6 +4,8 @@ import TopBanner from "../components/Banners/TopBanner";
 import { useGetSearch } from "../dummy-api/fetchingHooks";
 import TopicDisplay from "../components/TopicDisplay/TopicDisplay";
 
+// displays search movie page
+
 export default function SearchMoviePage({inputState}) {
   const getMovie = useGetSearch(inputState);
 
