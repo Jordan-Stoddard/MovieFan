@@ -6,6 +6,8 @@ import ButtonContainer from '../components/Buttons/ButtonContainer'
 import TopicDisplay from '../components/TopicDisplay/TopicDisplay'
 
 
+// displays now playing page
+
 export default function NowPlaying({topic}) {
   const [page, setPage] = useState(1)
     const getMovie = useGetTopic(topic, page)
