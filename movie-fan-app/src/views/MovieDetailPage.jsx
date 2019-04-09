@@ -6,6 +6,8 @@ import CastCarousel from '../components/Carousels/CastCarousel'
 import MovieDetailTrailer from '../components/MovieDetailComponents/MovieDetailTrailer'
 import MovieDetailReviews from '../components/MovieDetailComponents/MovieDetailReviews'
 
+// Displays movie detail page
+
 
 export default function MovieDetailPage(props) {
   const id = props.match.params.id;
