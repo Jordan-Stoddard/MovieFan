@@ -5,6 +5,8 @@ import {useGetTopic} from '../dummy-api/fetchingHooks'
 import ButtonContainer from '../components/Buttons/ButtonContainer'
 import TopicDisplay from '../components/TopicDisplay/TopicDisplay'
 
+// displays top rated page
+
 export default function TopRated({topic}) {
   const [page, setPage] = useState(1)
     const getMovie = useGetTopic(topic, page)
