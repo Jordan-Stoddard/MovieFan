@@ -4,6 +4,8 @@ import HomeJumboTron from "../components/HomeComponents/HomeJumbotron";
 import SmallMovieCarousel from "../components/Carousels/SmallMovieCarousel";
 import axios from "axios";
 
+// Displays homepage
+
 export default function Home() {
   const [trending, setTrending] = useState([]);
 
