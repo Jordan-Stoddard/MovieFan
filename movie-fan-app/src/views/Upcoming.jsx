@@ -5,6 +5,7 @@ import {useGetTopic} from '../dummy-api/fetchingHooks'
 import ButtonContainer from '../components/Buttons/ButtonContainer'
 import TopicDisplay from '../components/TopicDisplay/TopicDisplay'
 
+// displays upcoming page
 
 export default function Upcoming({topic}) {
   const [page, setPage] = useState(1)
