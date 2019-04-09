@@ -3,6 +3,8 @@ import HomeCarousel from '../components/Carousels/HomeCarousel'
 import SmallTVCarousel from '../components/Carousels/SmallTVCarousel'
 import {useGetTVTrending} from '../dummy-api/fetchingTVHooks'
 
+// displays tv shows page
+
 
 export default function TVShows() {
   const trending = useGetTVTrending()
