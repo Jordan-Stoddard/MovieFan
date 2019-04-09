@@ -11,6 +11,8 @@ import CastCarousel from "../components/Carousels/CastCarousel";
 import MovieDetailTrailer from "../components/MovieDetailComponents/MovieDetailTrailer";
 import MovieDetailReviews from "../components/MovieDetailComponents/MovieDetailReviews";
 
+// displays tv detail page
+
 export default function TVDetailPage(props) {
   const id = props.match.params.id;
   const movie = useGetTVShowById(id);
